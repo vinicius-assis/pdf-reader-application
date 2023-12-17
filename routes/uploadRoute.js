@@ -2,7 +2,7 @@ const express = require("express");
 const { uploadFile } = require("../controllers/uploadFile");
 const multer = require("multer");
 const storage = multer.diskStorage({
-  destination: `${__dirname}/../uploads/tmp-file`,
+  destination: `${__dirname}/../uploads/storage`,
   filename: function (req, file, cb) {
     cb(null, "tmpFile.pdf");
   },
